@@ -7,7 +7,7 @@ public class Entry : MonoBehaviour, IInteractable
 {
     [SerializeField] private string label;
     public int number = 0;
-    public AudioSource dooraudio;
+    public AudioSource audio;
 
     public string Label
     {
@@ -24,7 +24,7 @@ public class Entry : MonoBehaviour, IInteractable
    
     public void Start()
     {
-        dooraudio = GetComponent<AudioSource>();
+       audio = GetComponent<AudioSource>();
     }
    
 
@@ -37,34 +37,15 @@ public class Entry : MonoBehaviour, IInteractable
         }
         print("Interacted with " + entity.name);
         PlayerProperties pp = GameObject.FindObjectOfType<PlayerProperties>();
-        dooraudio.Play();
-        dooraudio.volume = 0.15f;
-        if ( label == "Στάδιο1" && pp.HasEntered[number - 1] == false)
+        audio.Play();
+        audio.volume = 0.15f;
+
+        if (label !=null && pp.HasEntered[number - 1] == false)//Load scene if not already visited
         {
-            SceneManager.LoadScene("Στάδιο1");
-            pp.HasEntered[number - 1] = true;
-            
-        }
-        if(label == "Στάδιο2" && pp.HasEntered[number - 1] == false)
-        {
-            SceneManager.LoadScene("Στάδιο2");
+            SceneManager.LoadScene(label);
             pp.HasEntered[number - 1] = true;
         }
-       if (label == "Στάδιο3" && pp.HasEntered[number - 1] == false)
-        {
-            SceneManager.LoadScene("Στάδιο3");
-            pp.HasEntered[number - 1] = true;
-        }
-        if (label == "Στάδιο4" && pp.HasEntered[number - 1] == false)
-        {
-            SceneManager.LoadScene("Στάδιο4");
-            pp.HasEntered[number - 1] = true;
-        }
-        if (label == "Στάδιο5" && pp.HasEntered[number-1]==false)
-        {
-            SceneManager.LoadScene("Στάδιο5" );
-            pp.HasEntered[number - 1] = true;
-        }
+       
     }
     public string GetTextLabel()
     {

@@ -14,7 +14,7 @@ public class Scene3Item : MonoBehaviour, IInteractable
     public Timerelapse time;
     public static bool IsCollected;
     public GameObject Dialogue;
-    public AudioSource sound;
+    public AudioManager audioManager;
 
     [SerializeField] private string label;
 
@@ -47,9 +47,7 @@ public class Scene3Item : MonoBehaviour, IInteractable
             if (d > effectiveRange) return;
         }
         print("Interacted with " + entity.name);
-        sound.Play();
-        sound.volume = 0.15f;
-        
+        audioManager.SearchTheAudio("pickitem");
         Item++;
         ItemText.text = ItemTextLabel + Item.ToString();
         Destroy(gameObject);

@@ -10,7 +10,7 @@ public class door : MonoBehaviour, IInteractable
     Animator anim;
     public Collider doorCollider;
     public int sceneNumber = 0;
-    public AudioSource audiodoor;
+    public AudioManager audioManager;
 
 
 
@@ -19,16 +19,8 @@ public class door : MonoBehaviour, IInteractable
         anim = GameObject.Find("door.005").GetComponent<Animator>();
         doorCollider = GetComponent<Collider>();
         doorCollider.isTrigger = false;
-        audiodoor = GetComponent<AudioSource>();
-
+        
     }
-
-    private void Update()
-    {
-
-
-    }
-
 
     [SerializeField] private string label;
 
@@ -65,13 +57,10 @@ public class door : MonoBehaviour, IInteractable
                 
                 StartCoroutine(Entry());
                 doorCollider.isTrigger = true;
-                audiodoor.Play();
-                audiodoor.volume = 0.15f;
+                audioManager.SearchTheAudio("pickitem");
                 anim.SetBool("IsWalking", true);
             }
-
         }
-
 
     }
 
@@ -86,8 +75,6 @@ public class door : MonoBehaviour, IInteractable
         return d <= effectiveRange;
 
     }
-
-
     public IEnumerator Entry()
     {
         yield return new WaitForSeconds(3f);

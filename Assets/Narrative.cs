@@ -23,18 +23,6 @@ public class Narrative : MonoBehaviour, IInteractable
     public EffectiveRangeMode rangeMode = EffectiveRangeMode.Distance;
     [Range(0.1f, 10)] public float effectiveRange;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void Interact(CharacterEntity entity)
     {
         if (rangeMode == EffectiveRangeMode.Distance)

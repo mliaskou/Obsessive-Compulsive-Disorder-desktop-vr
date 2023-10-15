@@ -480,7 +480,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &411081186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,7 +658,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1465,7 +1465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 723110077}
   m_Layer: 0
-  m_Name: Audio
+  m_Name: Narratives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4355,7 +4355,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 0.94716984, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 40
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4657,7 +4657,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 40
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4987,7 +4987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: "\u03A3\u03C4\u03AC\u03B4\u03B9\u03BF2"
   number: 2
-  dooraudio: {fileID: 945663837525600978}
+  audio: {fileID: 0}
   rangeMode: 0
   effectiveRange: 5
 --- !u!65 &945663837525600977
@@ -5154,7 +5154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: "\u03A3\u03C4\u03AC\u03B4\u03B9\u03BF1"
   number: 1
-  dooraudio: {fileID: 1077648473791072656}
+  audio: {fileID: 0}
   rangeMode: 0
   effectiveRange: 4
 --- !u!65 &1077648473791072655
@@ -6094,7 +6094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: "\u03A3\u03C4\u03AC\u03B4\u03B9\u03BF5"
   number: 5
-  dooraudio: {fileID: 2565136623783153450}
+  audio: {fileID: 0}
   rangeMode: 0
   effectiveRange: 5
 --- !u!95 &2565136623783153448
@@ -7468,7 +7468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: "\u03A3\u03C4\u03AC\u03B4\u03B9\u03BF4"
   number: 4
-  dooraudio: {fileID: 4691160319498531084}
+  audio: {fileID: 0}
   rangeMode: 0
   effectiveRange: 4
 --- !u!65 &4691160319498531083
@@ -8741,7 +8741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: "\u03A3\u03C4\u03AC\u03B4\u03B9\u03BF3"
   number: 3
-  dooraudio: {fileID: 7208781661672288734}
+  audio: {fileID: 0}
   rangeMode: 0
   effectiveRange: 4
 --- !u!65 &7208781661672288733
@@ -10420,7 +10420,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0

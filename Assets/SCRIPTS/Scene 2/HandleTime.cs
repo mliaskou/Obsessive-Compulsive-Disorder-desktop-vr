@@ -10,7 +10,6 @@ public class HandleTime : MonoBehaviour
     public UITextManager textManager;
     public string txt;
     public GameObject Dialogue;
-    // Update is called once per frame
 
     private void Start()
     {

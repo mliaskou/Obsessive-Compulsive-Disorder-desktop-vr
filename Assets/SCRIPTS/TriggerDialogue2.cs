@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class TriggerDialogue2 : MonoBehaviour, IInteractable
 {
     [SerializeField] private string label;
 
     public DialogueTrigger dialoguetrigger;
-    public GameObject Dialogue;
+    public GameObject DialogueButton;
+    public FirstPersonController fps;
     private bool AlreadyTriggered;
 
     public GameObject DiaryPage;
@@ -30,12 +32,6 @@ public class TriggerDialogue2 : MonoBehaviour, IInteractable
         AlreadyTriggered = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void Interact(CharacterEntity entity)
     {
         if (rangeMode == EffectiveRangeMode.Distance)
@@ -47,8 +43,9 @@ public class TriggerDialogue2 : MonoBehaviour, IInteractable
 
         if(!AlreadyTriggered)
         {
-            dialoguetrigger.TriggerDialogue();
-            Dialogue.SetActive(true);
+            fps.enabled = false;
+            Cursor.visible = true;
+            DialogueButton.SetActive(true);
             AlreadyTriggered = true;
             DiaryPage.SetActive(true);
         }

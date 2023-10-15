@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using static System.Net.Mime.MediaTypeNames;
 
 public class MainMenuS : MonoBehaviour
 {
@@ -39,10 +41,5 @@ public class MainMenuS : MonoBehaviour
 
     }
 
-    public void QuitButton()
-    {
-        // Quit Game
-        Application.Quit();
-    }
 }
 
